@@ -6,7 +6,7 @@ from mistralai.models import UserMessage
 # ----------------------------
 # Mistral setup
 # ----------------------------
-api_key = os.getenv("FWzRbzWDZYaBcnh6QKAmyXw8Iz9Jx2aA")
+api_key = os.getenv("MISTRAL_API_KEY")
 if not api_key:
     raise ValueError("MISTRAL_API_KEY is not set. Add it in Streamlit Secrets.")
 
@@ -113,3 +113,4 @@ IMPORTANT:
     summary = summarize_interaction(user_text, category, reply)
 
     return {"category": category, "reply": reply, "summary": summary}
+
